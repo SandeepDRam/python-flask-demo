@@ -27,7 +27,6 @@ pipeline {
    }
     stage('Dast') {
       steps {
-        sh 'pip install flake8'
         sh 'flake8 app.py'
       }
     }
