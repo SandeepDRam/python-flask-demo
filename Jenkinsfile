@@ -33,6 +33,7 @@ pipeline {
                 failure {
                    mail to: 'drsandeep2024@gmail.com', subject: 'Compile failed', body: 'Please fix the build'
                    //Jira newIssue: true, summary: 'Compile failed', description: 'Please fix the build'
+                   gitHubIssue title: 'Compile failed', body: 'Please fix the build', labels: 'build failure'
                          }
                 success {
                    mail to: 'drsandeep2024@gmail.com', subject: 'Unit tests passed', body: 'Congratulations!'
