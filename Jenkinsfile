@@ -25,6 +25,11 @@ pipeline {
           sh "sudo docker run -p 5000:5000 --name my-flask-app -d my-flask-app"
    }      
    }
+       stage('Sast') {
+            steps {
+                sh 'python3 -m unittest test_hello_world.py'
+            }
+        }
     stage('Dast') {
       steps {
          //sh 'source /path/to/venv/bin/activate && pip install flake8'
