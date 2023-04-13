@@ -29,7 +29,7 @@ pipeline {
       steps {
          //sh 'source /path/to/venv/bin/activate && pip install flake8'
          //sh 'pip install flake8'
-         sh 'export PATH="/home/ec2-user/venv/lib/python3.9/site-packages"; python3 app.py'
+         sh 'export PATH="/home/ec2-user/venv/lib/python3.9"; python3 app.py'
         //sh 'python3 app.py'
       }
     }
