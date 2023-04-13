@@ -1,11 +1,12 @@
+"""
+A simple Flask web application.
+"""
+
 import os
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
-"""
-A simple Flask web application.
-"""
 
 @app.route("/")
 def home():
