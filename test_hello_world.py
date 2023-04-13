@@ -6,7 +6,7 @@ class TestHelloWorld(unittest.TestCase):
 
     def test_upper(self):
         assert string_to_test.upper() == 'HELLO WORLD'
-    class 
+     
     def test_islower(self):
         assert string_to_test.islower()
         assert not string_to_test.upper().islower()
