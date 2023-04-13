@@ -25,15 +25,12 @@ pipeline {
           sh "sudo docker run -p 5000:5000 --name my-flask-app -d my-flask-app"
    }      
    }
-  stages {
     stage('Dast') {
       steps {
         sh 'pip install flake8'
         sh 'flake8 app.py'
       }
     }
-  }
-
     stage('Deploy') {
        
        steps {
