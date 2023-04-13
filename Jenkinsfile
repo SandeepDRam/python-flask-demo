@@ -31,6 +31,7 @@ pipeline {
          //sh 'pip install flake8'
          //sh 'export PATH="/home/ec2-user/venv/lib/python3.9/site-packages";'
          //sh 'conda activate myenv; python3 app.py'
+         sh 'source /home/ec2-user/miniconda3/lib/python3.9/site-packages'
          sh 'pylint app.py'
       }
     }
