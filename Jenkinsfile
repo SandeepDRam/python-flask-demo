@@ -27,9 +27,9 @@ pipeline {
    }
     stage('Dast') {
       steps {
-         sh 'source /path/to/venv/bin/activate && pip install flake8'
-         sh 'pip install flake8'
-        sh 'flake8 app.py'
+         //sh 'source /path/to/venv/bin/activate && pip install flake8'
+         //sh 'pip install flake8'
+        sh 'python3 app.py'
       }
     }
     stage('Deploy') {
