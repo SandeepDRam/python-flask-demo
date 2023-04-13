@@ -28,6 +28,17 @@ pipeline {
        stage('Sast') {
             steps {
                 sh 'python3 -m unittest test_hello_world.py'
+               post {
+                failure {
+                   mail to: 'drsandeep2024@gmail.com', subject: 'Compile failed', body: 'Please fix the build'
+                   Jira newIssue: true, summary: 'Compile failed', description: 'Please fix the build'
+                         }
+                     }
+               post {
+                success {
+                   mail to: 'drsandeep2024@gmail.com', subject: 'Unit tests passed', body: 'Congratulations!'
+                        }
+                    }
             }
         }
     stage('Dast') {
